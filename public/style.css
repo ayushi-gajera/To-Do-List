@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.heading {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 590px;
+    width: 400px;
+    background-color: rgb(217, 228, 206);
+    border: 2px solid rgb(116, 139, 99);
+    box-shadow: 10px;
+    border-radius: 10px;
+}
+
+.to-do-list {
+    overflow: scroll;
+}
+
+.to-do-list::-webkit-scrollbar {
+    display: none;
+}
+
+.addTask button,
+.editButton {
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(116, 139, 99);
+    border: none;
+    width: 380px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.addTask button:hover,
+.editButton:hover {
+    background-color: rgb(93, 112, 80);
+    transition: 0.8s;
+}
+
+.deleteTask {
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.deleteTask i {
+    font-size: 20px;
+}
+
+.deleteTask:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.editDelete {
+    padding-left: 1.2rem;
+    gap: 5rem;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.editTask {
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.editTask i {
+    font-size: 20px;
+}
+
+.editTask:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.createTask {
+    height: 400px;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.editAll {
+    height: 440px;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.task,
+.time,
+.desc {
+    background-color: rgb(246, 250, 248);
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.desc {
+    min-width: 380px;
+    min-height: 40px;
+    max-width: 380px;
+    max-height: 40px;
+}
+.edittask {
+    background-color: rgb(246, 250, 248);
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.show {
+    background-color: rgb(246, 250, 248);
+    width: 380px;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+.showTask {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#task {
+    font-size: 17px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+#time,
+#date,
+#desc {
+    height: 40px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+#desc {
+    margin-top: -0.3rem;
+    max-width: 21.7rem;
+    text-align: justify;
+}
+
+#desc span {
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+.time-date {
+    margin-top: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.7rem;
+    border-bottom: 0.8px dashed grey;
+    margin-bottom: 0.8rem;
+}
+
+.title-desc {
+    border-bottom: 0.8px dashed grey;
+    height: 100px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.title-desc::-webkit-scrollbar {
+    display: none;
+}

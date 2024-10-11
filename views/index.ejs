@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>To do List</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <form action="/add" method="get">
+                <div class="head">
+                    <h2 class="heading">TO DO APP</h2>
+                    <div class="addTask">
+                        <button><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;Add New Task</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="to-do-list">
+                <%for(t of toDoList) { %>
+                    <div class="show">
+                        <div class="showTask">
+                            <div class="time-date">
+                                <p name="due_time" id="time">
+                                    🕒&nbsp; <%= t.due_time %>
+                                </p>
+                                <p name=" due_date" id="date">📅 &nbsp;<%=
+                                        t.due_date.toString().split(" ").slice(0,4).join(" ") %>
+                                </p>
+                            </div>
+
+                            <div class="title-desc">
+                            <p name="title" id="task">
+                                        <b>
+                                            📖 &nbsp;Task: </b><%= t.title %>
+                                        
+                                </p>
+                                <p name="description" id="desc">
+                                    <b> 📝&nbsp; Description: </b> <br><span> "<%= t.description %>"</span>
+                                </p>
+                                <br>
+                            </div>
+                            </div>
+                            <div class="editDelete">
+                                <form action="/<%= t.id %>/edit">
+                                    <button class="editTask"> ✏️ &nbsp;Edit</button>
+                                </form>
+                                <form action="/<%= t.id %>?_method=DELETE" method="post">
+                                    <button class="deleteTask"> 🗑️ &nbsp;Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <% } %>
+                    </div>
+            </div>
+        </div>
+</body>
+
+</html>
